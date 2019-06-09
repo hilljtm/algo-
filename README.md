@@ -1,4 +1,7 @@
-<img src='ma.png' width="400" />
+<img src='ma.png' width="500" />
+<img src='ichi.png' width="500" />
+&nbsp;
+&nbsp;
 &nbsp;
 
 #

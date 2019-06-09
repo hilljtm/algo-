@@ -31,9 +31,9 @@ df['Lagging_span'] = df.Open.shift(Lag_span)
 df.dropna(inplace=True)
 
 
-fig, ax = plt.subplots(1, 1, sharex=True, figsize=(20, 9))
+fig, ax = plt.subplots(1, 1, sharex=True, figsize=(20, 15))
 
-ax.plot(df.index, df.Open, linewidth=4)
+ax.plot(df.index, df.Open, linewidth=3, color='black')
 
 ax.plot(df.index, df.Lead_span_A)
 
@@ -47,4 +47,5 @@ plt.legend(loc=0)
 
 plt.grid()
 
+plt.savefig('ichi.png', facecolor='white', edgecolor='black')
 plt.show()
