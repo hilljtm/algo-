@@ -40,9 +40,9 @@ ax.plot(df.index, df.Lead_span_A)
 ax.plot(df.index, df.Lead_span_B)
 
 ax.fill_between(df.index, df.Lead_span_A, df.Lead_span_B,
-                where=df.Lead_span_A >= df.Lead_span_B, color='lightgreen')
+                where=df.Lead_span_A >= df.Lead_span_B, color='g')
 ax.fill_between(df.index, df.Lead_span_A, df.Lead_span_B,
-                where=df.Lead_span_A < df.Lead_span_B, color='lightcoral')
+                where=df.Lead_span_A < df.Lead_span_B, color='#966464')
 plt.legend(loc=0)
 
 plt.grid()

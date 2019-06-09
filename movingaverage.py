@@ -47,6 +47,7 @@ btc['High'].plot(ax=ax1, color='black', lw=2.)
 
 signals[['short_mavg', 'long_mavg']].plot(ax=ax1, lw=2.)
 
+
 ax1.plot(signals.loc[signals.positions == 1.0].index,
          signals.short_mavg[signals.positions == 1.0],
          '^', markersize=20, color='g')
@@ -54,6 +55,7 @@ ax1.plot(signals.loc[signals.positions == 1.0].index,
 ax1.plot(signals.loc[signals.positions == -1.0].index,
          signals.short_mavg[signals.positions == -1.0],
          'v', markersize=20, color='r')
+
 
 plt.savefig('ma.png', facecolor='w', edgecolor='w')
 plt.show()
