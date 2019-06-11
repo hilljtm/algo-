@@ -1,17 +1,13 @@
 #%%
-import config 
-import requests
 import pandas as pd
-import matplotlib.pyplot as plt
+import numpy as np 
+from matplotlib import pyplot as plt
+import matplotlib as mpl
+import seaborn as sns
+sns.set()
+mpl.rcParams['figure.dpi'] = 300
+plt.style.use('seaborn')
 
+df = pd.read_csv('finexhourly.csv', parse_dates=True)
 
-apiKey = "compare_key"
-
-url = "https://min-api.cryptocompare.com/data/histohour?fsym=BTC&tsym=USD&limit=24&aggregate=3&e=CCCAGG"
-
-result = requests.get(url)
-result.json()
-
-#TODO create columns and plug result into DF
-df = pd.DataFrame(result)
 df.head()
