@@ -4,10 +4,11 @@ import numpy as np
 from matplotlib import pyplot as plt
 import matplotlib as mpl
 import seaborn as sns
-sns.set()
-mpl.rcParams['figure.dpi'] = 300
-plt.style.use('seaborn')
+sns.set(context='notebook', style='darkgrid', palette='deep',color_codes=True, rc=None)
 
-df = pd.read_csv('finexhourly.csv', parse_dates=True)
 
-df.head()
+df = pd.read_csv('finexhourly.csv', parse_dates=['Date'])
+
+sns.lineplot(data=df, x='Date', y='Close')
+
+
