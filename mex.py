@@ -7,8 +7,6 @@ import seaborn as sns
 sns.set(context='notebook', style='darkgrid', palette='deep',color_codes=True, rc=None)
 
 
-df = pd.read_csv('finexhourly.csv', parse_dates=['Date'])
+df = pd.read_csv('finexhourly.csv')
 
-sns.lineplot(data=df, x='Date', y='Close')
-
-
+sns.lineplot(df)
